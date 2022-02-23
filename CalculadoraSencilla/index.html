@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora sencilla</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+    <main class="background">
+        <div class="container">
+            <form name="calc" id="calc" class="calc" method="get" action="">
+                <input type="text" name="value" id="value" class="value" readonly>
+                <input type="num" name="num" id="num" class="num" placeholder="0" autofocus autocomplete="off">
+                <span id="group-btn" class="group-btn">
+                    <span type='submit' id="suma" class="btn suma">+</span>
+                    <span type='submit' id="resta" class="btn resta">-</span>
+                    <span type='submit' id="multiplicacion" class="btn multiplicacion">*</span>
+                    <span type='submit' id="division" class="btn division">/</span>
+                    <span type='submit' id="cancelar" class="btn cancelar">C</span>
+                    <span type='submit' id="resultado" class="btn resultado">=</span>
+                </span>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

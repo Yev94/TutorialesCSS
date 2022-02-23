@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: calibri, sans-serif;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #091921;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ffc107, #e91e63);
+    clip-path: circle(22% at 30% 20%);
+    z-index: 0;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fff, #d61063);
+    clip-path: circle(22% at 70% 90%);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    background-color: #ffffff11;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #ffffff22;
+    border-left: 1px solid #ffffff22;
+    box-shadow: 5px 5px 30px #00000022;
+}
+
+.container .calc {
+    position: relative;
+    display: grid;
+}
+
+.value,
+.num{
+    grid-column: span 4;
+    height: 140px;
+    width: 400px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid #ffffff22;
+    border-right: 1px solid #ffffff22;
+}
+.group-btn{
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 75px;
+    color: #ffff;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid #ffffff11;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.btn:hover,
+.num:hover{
+    transition: 0s;
+    background: #ffffff11;
+}
+.num:focus{
+    transition: 0s;
+    background: #ffffff22;
+}
+
+.btn:active,
+.active{
+    font-size: 24px;
+    font-weight: 500;
+    background: linear-gradient(-45deg, #ffc107, #e91e63);
+}
+
+.group-btn .resultado,
+.group-btn .cancelar{
+    grid-column: span 2;
+    width: 200px;
+}
+
+.error-shake {
+    animation: shake 0.4s 1 linear;
+}
+
+.error-color{
+    color: red;
+}
+
+@keyframes shake {
+    0% { transform: translate(30px); }
+    20% { transform: translate(-30px); }
+    40% { transform: translate(15px); }
+    60% { transform: translate(-15px); }
+    80% { transform: translate(8px); }
+    100% { transform: translate(0px); }
+}
